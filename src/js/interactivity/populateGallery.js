@@ -14,9 +14,10 @@ export default function populateGallery(shots) {
     const img = new Image()
     img.src = imgUrl
 
-    img.onerror = () => {
-      console.log('failed')
-    }
+    // can be some massage
+    // img.onerror = () => {
+    //   console.log('failed')
+    // }
 
     img.onload = () => {
       img.classList.add('shot__img')

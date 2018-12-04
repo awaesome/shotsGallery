@@ -35,7 +35,7 @@ function handleSubmit(e) {
   const queryString = (this.querySelector('input[type=search]')).value
   currentSearch.innerHTML = queryString
   if (queryString != '') {
-    displayLoad_clearGallery(loading, gallery, pageOverlay)
+    displayLoad_clearGallery(loading, buttonMore, gallery, pageOverlay)
 
     options = {
       queryString,
@@ -44,7 +44,10 @@ function handleSubmit(e) {
 
     getProjects(options)
       .then(data => { populateGallery(data) })
-      .then(loading.style.display = "none")
+      .then(() => {
+        loading.style.display = "none"
+        buttonMore.style.display = "block"
+      })
   }
 
   this.reset()
@@ -64,7 +67,7 @@ function handleClickMore(e) {
 // fetch data on tag click
 function handleClickTag(e) {
   e.preventDefault()
-  displayLoad_clearGallery(loading, gallery, pageOverlay)
+  displayLoad_clearGallery(loading, buttonMore, gallery, pageOverlay)
 
   if (e.target.matches('li')) {
     this.style.pointerEvents = "none"
@@ -83,6 +86,7 @@ function handleClickTag(e) {
       .then(data => { populateGallery(data) })
       .then(() => {
         loading.style.display = "none"
+        buttonMore.style.display = "block"
         this.style.pointerEvents = "auto"
       })
   }
@@ -143,16 +147,15 @@ function handlePressClose(e) {
 
 // populate gallery on page load
 window.onload = () => {
-  displayLoad_clearGallery(loading, gallery, pageOverlay)
+  displayLoad_clearGallery(loading, buttonMore, gallery, pageOverlay)
   options.queryString = "random"
   getProjects(options)
     .then(data => { populateGallery(data) })
-    .then(loading.style.display = "none")
+    .then(() => {
+      loading.style.display = "none"
+      buttonMore.style.display = "block"
+    })
 }
-
-// show button after some time to content load
-setTimeout(() => buttonMore.style.display = "block", 2000)
-
 
 headerMenuSearch.addEventListener('submit', handleSubmit)
 heroSearch.addEventListener('submit', handleSubmit)
