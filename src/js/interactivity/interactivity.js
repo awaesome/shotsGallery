@@ -25,7 +25,7 @@ let options = {
   queryString: '',
   sort: '',
   time: '',
-  page: ''
+  page: 1
 }
 
 // fetch data on form(input) submit
