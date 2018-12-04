@@ -6,7 +6,12 @@ function getProjects(params) {
     sort=${sort}&
     time=${time}&
     page=${page}&
-    client_id=GrKmy2bSjvIkRhYxKWxcsqy1Msfe3Lmb`)
+    client_id=GrKmy2bSjvIkRhYxKWxcsqy1Msfe3Lmb`, {
+      mode: 'no-cors',
+      header: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    })
     .then(res => {
       if (res.ok) {
         console.log(res.status)
