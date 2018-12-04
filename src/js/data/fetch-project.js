@@ -1,6 +1,6 @@
 function getProject(id) {
 
-  return fetch(`http://www.behance.net/v2/projects/${id}?api_key=GrKmy2bSjvIkRhYxKWxcsqy1Msfe3Lmb`)
+  return fetch(`https://www.behance.net/v2/projects/${id}?api_key=GrKmy2bSjvIkRhYxKWxcsqy1Msfe3Lmb`)
     .then(res => {
       if (res.ok) {
         console.log(res.status)
