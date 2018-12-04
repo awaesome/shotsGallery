@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./src/css/main.css">
+  <title>Artit</title>
+</head>
+
+<body>
+  <div class="header-menu sticky-top">
+    <nav class="navbar navbar-light">
+      <form class="prime-search">
+        last search
+        <span class="current-search"></span>
+        <input class="form-control mr-sm-2" type="search" placeholder="Discover..." aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0 header-menu__submit" type="submit">Go</button>
+      </form>
+
+      <div class="m-2" id="navbarSupportedContent">
+        <span class="header-menu__tags-title">Tags |</span>
+        <ul class="tags">
+        </ul>
+      </div>
+    </nav>
+    <span class="divider-line"></span>
+  </div>
+  <!--header-menu  -->
+
+
+  <div class="main-hero-search">
+    <div class="background"></div>
+    <button type="button" class="gBtn gBtn--change-bg">Change background</button>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <form class="prime-search prime-search--main-hero">
+        <input class="form-control mr-sm-2" type="search" placeholder="Discover..." aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0 main-hero-search__form__submit" type="submit">Go</button>
+      </form>
+    </nav>
+    <div class="main-hero-search__popular">
+      <span>Popular searches</span>
+      <ul class="tags">
+      </ul>
+    </div>
+  </div>
+  <!--main-hero-search  -->
+
+  <section class="mainContent">
+    <img class="loading" src="./src/assets/img/loading.gif" alt="">
+
+    <div class="page-overlay">
+      <div class="img-card">
+      </div>
+    </div>
+    <!--page-overlay  -->
+
+    <div class="gallery">
+    </div>
+    <button type="button" class="gBtn gBtn--more-content">More</button>
+  </section>
+  <!--main-content  -->
+
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+  <script src="./src/js/main.js" charset="utf-8"></script>
+</body>
+
+</html>

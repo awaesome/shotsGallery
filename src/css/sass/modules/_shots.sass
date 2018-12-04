@@ -1,0 +1,59 @@
+/* Shots
+.shot
+  position: relative
+  overflow: hidden
+  display: grid
+  grid-template-columns: 1
+  grid-template-rows: 1
+
+  &:hover &__overlay
+    display: flex
+
+  &__overlay
+    position: absolute
+    display: none
+    justify-content: space-between
+    align-items: flex-end
+    width: 100%
+    height: 100%
+    padding: 10px
+    bottom: 0
+    background-image: linear-gradient(to top, black, transparent)
+
+    &__name
+      font-family: 'IBM Plex Mono', Roboto, sans-serif
+      color: white
+      padding: 0 5px
+      background: $color_bg_transparent
+      border: 1px solid $color_bg
+
+    &__stats
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin: 0 5px
+      user-select: none
+
+      .badge
+        margin-top: 3px
+        font-size: 1em
+        height: 25px
+
+.shot--tall
+  grid-column: span 2
+  grid-row: span 3
+
+.shot--wide
+  grid-column: span 2
+  grid-row: span 1
+
+.shot--big
+  grid-column: span 2
+  grid-row: span 2
+
+.shot__img
+  grid-column: 1 / -1
+  grid-row: 1 / -1
+  width: 100%
+  height: 100%
+  object-fit: cover

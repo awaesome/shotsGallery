@@ -1,0 +1,33 @@
+/* primary search form
+.prime-search
+  @extend .form-inline
+  transition: all 0.3s
+  margin-top: -50px
+  margin-bottom: 15px
+  flex-flow: row nowrap
+
+  button, input
+    background: rgba(255,255,255,0.3)
+    border-color: black
+    border-radius: 0
+    margin: 0 2px !important
+
+  input:focus, button:focus
+    box-shadow: 0 0 0 0.2rem $color_borders !important
+    border-color: transparent
+
+.prime-search--main-hero
+  margin: 0
+  input[type=search]
+    width: 40vw
+
+.isShow
+  margin: 0
+
+.header-menu
+  .prime-search
+    transform: translateX(-15%)
+
+@media screen and (max-width: 840px)
+  .prime-search
+    transform: translateX(0)

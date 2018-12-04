@@ -1,0 +1,67 @@
+/* image card
+.img-card
+  width: 100%
+  height: 90vh
+  display: grid
+  grid-template-rows: 1fr 5fr 1fr
+
+  &__header
+    grid-row: 1/ 2
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    align-items: center
+    width: 100%
+    margin: 0 auto
+    padding: 0 10px
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    border: 2px solid black
+    border-bottom: none
+    background: #fff
+
+    &__img-name
+      border: 2px solid black
+      padding: 5px
+      font-weight: 600
+      margin: 0 auto
+
+    &__stats
+      display: flex
+      justify-content: flex-end
+
+      & > span
+        margin: 5px
+
+  &__container-img
+    overflow: hidden
+    grid-row: 2 / 3
+    display: grid
+
+    &__img
+      grid-column: span 1
+      grid-row: span 1
+      width: 100%
+      height: 100%
+      object-fit: contain
+
+      &--origin
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        height: auto
+        z-index: 10
+
+  &__footer
+    grid-row: 3 / 4
+    width: 100%
+    +flexCenter()
+    margin: 0 auto
+    padding: 0 30px
+    border: 2px solid black
+    border-top: none
+    background: #fff
+
+    .fa-window-close
+      font-size: 2.5rem
+      margin-left: 5px
